@@ -69,12 +69,12 @@ const StudentList = () => {
     }, 5000);
 
   return (
-    <div className='p-2 shadow-lg  studentList'>
+    <div className='p-2 shadow-lg  studentList' style={{ maxHeight: '500px', overflowY: 'auto' }}>
       
       <h2 className='text-light '>Student List </h2>
-      <ul className='list-unstyled '>
+      <ul className='list-unstyled'>
         {students.map((student,index) => (
-          <li className='  bg-success-subtle m-1 p-3 rounded gap-3' key={student._id}>
+          <li className=' bg-success-subtle m-1 p-3 rounded gap-3' key={student._id}>
             <div className='d-flex flex-column gap-1 '>
               <div>{isEditing(student._id) && enableEdit ? <input onChange={(e)=>setName(e.target.value)} value={name} className='rounded  p-1' placeholder='Name' required/> :`Name :  ${student.name}`}</div> 
               <div>{isEditing(student._id) && enableEdit ? <input onChange={(e)=>setAge(e.target.value)} value={age}s className='p-1 rounded ' type='number' placeholder='age' required/> : `age :  ${student.age}`}</div>

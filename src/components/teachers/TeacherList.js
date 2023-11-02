@@ -72,7 +72,7 @@ const TeacherList = () => {
     }, 5000);
 
   return (
-    <div className='p-2 shadow-lg '>
+    <div className='p-2 shadow-lg ' style={{ maxHeight: '500px', overflowY: 'auto' }}>
       <h2 className='text-light '>Teachers List</h2>
       <p className='text-bg-danger text-center ' >{deletedMessage?deletedMessage:null}</p>
       <ul className='list-unstyled '>

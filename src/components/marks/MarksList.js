@@ -63,7 +63,7 @@ const MarksList = () => {
   }
 
   return (
-    <div className='p-2 shadow-lg '>
+    <div className='p-2 shadow-lg 'style={{ maxHeight: '500px', overflowY: 'auto' }}>
       <h2 className='text-light '>Marks List</h2>
       <ul className='list-unstyled'>
         {marks.map((mark) => (
